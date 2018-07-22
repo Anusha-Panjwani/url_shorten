@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Bitly</title>
+</head>
+<body>
+	<h1>Short your URL</h1>
+
+	<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+    	{{ form.as_p }}
+    	<input type="submit" class="btn btn-primary" value="Shorten">
+    </form>
+
+    <a href="{{long_url}}"> <h1>{{ long_url }}</h1></a>
+    <h2>{{ shortcode }}</h2>
+    <h3>{{ count }}</h3>
+
+</body>
+</html>
